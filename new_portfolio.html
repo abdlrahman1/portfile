@@ -1,0 +1,1209 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/all.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+::-webkit-scrollbar{
+
+  width: 12px;
+}
+
+::-webkit-scrollbar-track{
+  background-color: #C1C1C1;
+}
+
+::-webkit-scrollbar-thumb{
+
+  border-radius: 12px;
+  background-color: #4D4D4D;
+}
+
+*{
+
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+}
+
+body{
+
+
+    background-color: #222;
+    z-index: 1 ;
+
+}
+
+.header{
+  position: fixed;
+display: flex;
+justify-content: space-between;
+background-color: #222222;
+color:white;
+height: 50px;
+z-index: 2;
+        /* background: #222; */
+    /* -webkit-box-shadow: 4px 0 20px -5px rgba(0,0,0,.2); */
+    box-shadow: inset -7px -14px 20px -5px rgb(0 0 0 / 20%);
+   right:0;
+    top:0;
+    bottom: 0;
+    left: 0;
+    transition: 5.s;
+
+}
+
+.logo{
+
+display: flex;
+justify-content: center;
+align-items: center;
+width: 10%;
+font-size: 20px;
+
+
+}
+.links{
+
+
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 60px;
+   
+}
+.links li{
+
+margin-left: 18px;
+font-size: 20px;
+cursor: pointer;
+
+
+}
+.home{
+    color:#F18803;
+}
+
+.links li:hover{
+
+    color:#F18803;
+}
+
+
+.slideshow_container {
+  max-width: 100%;
+  height: 55vh;
+  position: relative;
+  margin: auto;
+  top:50px;
+
+
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #F18803;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #F18803;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+position:relative;
+top:25px;
+  background-color: #F18803;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.img_style{
+  width: 100%;
+  height: 55vh;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+  
+  .prev, .next,.text {font-size: 11px}
+}
+
+.section1{
+
+    width: 100%;
+    background-color: #222222;
+    height: 100px;
+    padding: 70px;
+    
+
+}
+
+#ani1{
+  animation-duration: 0.5s;
+    animation-name: animate;
+animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+    font-size: 20px;
+   line-height: 38px;
+   margin-right: 10px ;
+}
+
+@keyframes animate{
+0%{
+    transform: translateX(7px);
+}
+
+100%{
+
+    transform: translateX(0);
+}
+}
+
+#ani2{
+
+  animation-duration: 0.5s;
+    animation-name: ani2;
+animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+    font-size: 20px;
+   line-height: 38px;
+   margin-left: 10px ;
+}
+
+@keyframes ani2{
+0%{
+    transform: translateX(-7px);
+}
+
+100%{
+
+    transform: translateX(0);
+}
+}
+.h1{
+
+    display: flex;
+    justify-content: center;
+    color:#F18803;
+    font-size: 30px;
+}
+ .p{
+    display: flex;
+    justify-content: center;
+    margin: 4px;
+    color:#939393;
+    flex-wrap: wrap;
+}
+
+.section2{
+
+
+    display: flex;
+    width: 70%;
+    background-color: red;
+  margin: 100px auto;
+  height: 360px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #222222;
+  position: relative;
+
+}
+
+.box{
+
+
+width: 27%;
+background-color: #222222;
+height: 170px;
+
+
+position: relative;
+
+
+}
+.box::before{
+
+    content:"";
+    width: 50px;
+    height: 30px;
+    border-radius: 50%;
+ background-color: #333333;
+position: absolute;
+top:-45px;
+left: -19px;
+ 
+  
+}
+
+.box .section2_h3{
+
+    display: flex;
+    justify-content: flex-start;
+    color:white;
+    margin-bottom: 12px;
+}
+.box .section2_p{
+    color:#939393;
+
+}
+
+.section3{
+
+
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: #222222;
+    justify-content: center;
+   
+}
+.section3 .section3_h1{
+
+color:#F18803;
+display: flex;
+
+
+
+}
+
+.con_left_right{
+
+    background-color: #222222;
+    width: 100%;
+    height: 480px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding:20px;
+
+}
+
+.left{
+
+width: 40%;
+background-color: #222222;
+color:white;
+display: flex;
+justify-content: center;
+flex-direction: column;
+text-align: center;
+
+
+
+}
+.left_child_h2{
+
+color:#FF8B00;
+width: 100%;
+margin: 15px;
+
+}
+.p_left_child{
+
+color:#8F9193;
+
+}
+
+.right{
+
+display: flex;
+flex-direction: column;
+width: 40%;
+justify-content: center;
+text-align: center;
+background-color: #222222;
+height: fit-content;
+}
+
+.right_child_h2{
+
+color:#F18803;
+width: 100%;
+margin: 15px;
+
+}
+
+.p_right_child{
+color:#8F9193;
+
+}
+
+.section4{
+
+  width: 100%;
+  height: 400px;
+position: relative;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.section4_h1{
+
+  color:#F18803;
+  font-size: 28px;
+
+  }
+
+.parent_img{
+width: 47%;
+  display: flex;
+justify-content: flex-end;
+}
+
+.parent_img .img{
+width: 70%;
+height: 400px;
+padding: 10px;
+position: relative;
+top:-40px;
+
+}
+
+.child_section4{
+width: 40%;
+
+color:#8F9193;
+}
+
+
+.parent_img_right{
+  display: flex;
+  justify-content: flex-start;
+  width: 50%;
+
+}
+
+.parent_img_right .img_right{
+
+width: 70%;
+height: 400px;
+padding: 10px;
+position: relative;
+top:-40px;
+left: -45px;
+
+}
+
+
+.child_section4_right{
+width: 50%;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+color:#8F9193;
+
+
+}
+
+.con_get_in_touch{
+width: 100%;
+display: flex;
+justify-content: center;
+height: 100px;
+align-items: center;
+flex-direction: column;
+}
+.con_get_in_touch span{
+  color:#B8B8B8;
+}
+
+.con_get_in_touch h1{
+  color:#F18803;
+}
+
+.con_all{
+
+width: 100%;
+display: flex;
+justify-content: space-between;
+
+}
+.section5_contact_me{
+
+
+  width: 50%;
+  height: 460px;
+  margin: 0 10%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+
+
+.parent_row_one{
+
+width: 550px;
+display: flex;
+justify-content: space-around;
+padding: 0 0px;
+
+
+}
+
+
+
+.input1, .input2 {
+
+  height: 55px;
+border: none;
+background-color: #333;
+width:275px;
+padding: 0 10px;
+font-size: 17px;
+border-radius: 2px;
+
+
+}
+
+
+.parent-email{
+
+width: 550px;
+height: 55px;
+display: flex;
+justify-content: center;
+
+
+}
+
+.parent-email .email{
+
+width:550px;
+height: 55px;
+background-color: #333;
+padding: 0 10px;
+font-size: 17px;
+border:none;
+border-radius: 2px;
+
+
+}
+
+.parent_textarea{
+
+  width: 550px;
+  height: 265px;
+}
+
+ .textarea{
+
+width: 550px;
+border: none;
+background-color: #333;
+font-size: 17px;
+height: 265px;
+
+}
+
+.parent_btn{
+
+width: 560px;
+display: flex;
+justify-content: flex-end;
+
+}
+.parent_btn .btn_child{
+
+    display: inline-block;
+    font-weight: 400;
+    color:white;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    background-color: #F18803;
+    border:none;
+    border-color:#F18803;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+}
+.con_h1_section5{
+
+display: flex;
+justify-content: flex-start;
+width: 50%;
+padding: 30px;
+flex-direction: column;
+
+}
+.con_h1_section5 h1{
+
+color:#F18803;
+}
+.para_section5{
+
+color:#8F9193;
+
+}
+
+
+.scroll_btn{
+
+position: fixed;
+right: -40px;
+bottom: 10px;
+background-color: #ff5722;
+color:white;
+font-weight: bold;
+font-size: 12px;
+padding: 12px;
+border-radius: 4px;
+border:none;
+font-family: arial, Tahoma;
+transition: 0.2s;
+cursor: pointer;
+}
+
+.scroll_btn.show{
+
+right: 10px;
+
+}
+
+#arrow_up{
+  font-size: 20px;
+  animation-duration: 1s;
+  animation-name: arrow;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+}
+@keyframes arrow{
+0%{
+    transform: translateY(6px);
+}
+
+100%{
+
+    transform: translateY(0);
+}
+}
+
+#loader{
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 80px;
+  height: 80px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #F18803;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 768px) {
+
+.section2{
+width: 100%;
+height: 1200px;
+display: flex;
+flex-direction: column;
+
+
+
+}
+.box{
+
+width: 100%;
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+.section3{
+
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 20px;
+
+}
+.con_left_right{
+
+width: 100%;
+display: flex;
+flex-direction: column;
+height: 800px;
+
+}
+
+.left{
+
+width: 100%;
+
+}
+
+.right{
+  width: 100%;
+}
+
+.section4{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+
+}
+.child_section4{
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.parent_img{
+
+  width: 100%;
+}
+.parent_img .img{
+
+width: 100%;
+position: relative;
+top:0;
+
+}
+.parent_img_right{
+
+width: 100%;
+order:1;
+
+}
+.parent_img_right .img_right{
+
+  width: 100%;
+  position: relative;
+  top:0;
+  right: 0;
+  left: 0;
+}
+
+.child_section4_right{
+
+  width: 100%;
+  order:2;
+  
+}
+
+.con_all{
+
+  width: 91%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.section5_contact_me{
+
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 510px;
+}
+
+.parent_row_one{
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.parent-email {
+
+width:100%;
+
+
+}
+#email{
+  width: 100%;
+}
+
+.input1 , .input2 , .parent_textarea , .textarea, .parent_btn{
+
+  width: 100%;
+  margin: 3px 0;
+}
+.con_h1_section5{
+
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.para_section5{
+
+  width: 100%;
+word-break: break-all;
+line-height: 1.6;
+}
+.parent_btn{
+  width: 100%;
+
+}
+.parent_btn .btn_child{
+  width: 100%;
+}
+
+
+}
+
+</style>
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+  <div id="loader"></div>
+  <div class="con_page" style="display:none;" id="c_page">
+ 
+<header class="header" id="header" onscroll="fun"()> 
+       
+          <div class="logo">Logo</div>
+          <ul class="links">
+            <li class="home" id="home">Home</li>
+            <li id="about">About</li>
+            <li id="services">Services</li>
+            <li id="contact">Contact</li>
+          </ul>
+    </header>
+
+    <div class="slideshow_container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 4</div>
+          <img src="upwork/Screenshot_7.png" class="img_style">
+          <div class="text">Caption Text</div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 4</div>
+          <img src="upwork/Screenshot_9.png" class="img_style">
+          <div class="text">Caption Two</div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 4</div>
+          <img src="upwork/Screenshot_2.png" class="img_style">
+          <div class="text">Caption Three</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 4</div>
+          <img src="upwork/Screenshot_11.png" class="img_style">
+          <div class="text">Caption four</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+
+    <section class="section1">
+<h1 class="h1"> <span > <i class="fas fa-angle-double-right" id="ani1"></i></span> Services <span> <i class="fas fa-angle-double-left" id="ani2" ></i> </span> </h1>
+<P class="p" class="section2_p"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere at delectus <br>  laudantium, deserunt, atque eveniet. Voluptatem, fuga quos rerum inventore.</P>
+
+
+
+    </section>
+
+    <section class="section2">
+
+      <div class="box">
+<h3 class="section2_h3"> this is h2</h3>
+<P class="section2_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolores voluptas obcaecati quo consequuntur mollitia facilis.</P>
+      </div>  
+
+<div class="box">
+    <h3 class="section2_h3"> this is h2</h3>
+    <P class="section2_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolores voluptas obcaecati quo consequuntur mollitia facilis.</P>
+</div>
+
+<div class="box">
+    <h3 class="section2_h3"> this is h2</h3>
+    <P class="section2_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolores voluptas obcaecati quo consequuntur mollitia facilis.</P>
+</div>
+<div class="box">
+    <h3 class="section2_h3"> this is h2</h3>
+    <p class="section2_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolores voluptas obcaecati quo consequuntur mollitia facilis.</p>
+</div>
+
+<div class="box">
+
+  <h3 class="section2_h3">  this is h2</h3>
+
+<P class="section2_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolores voluptas obcaecati quo consequuntur mollitia facilis.</P>
+</div>
+<div class="box">
+    <h3 class="section2_h3"> this is h2</h3>
+    <p class="section2_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolores voluptas obcaecati quo consequuntur mollitia facilis.</p>
+</div>
+    </section>
+
+    <section class="section3">
+
+
+     <h1 class="section3_h1">FREQUENTLY ASK QUESTIONS</h1>
+    </section>
+
+
+
+
+    <section class="con_left_right">
+ <div class="left">
+<h2 class="left_child_h2" > can i accept both paypal and sheift?</h2>
+<p class="p_left_child">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</P>
+   
+    <h2 class="left_child_h2" > can i accept both paypal and sheift?</h2>
+    <p class="p_left_child">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</P>
+    
+        <h2 class="left_child_h2" > can i accept both paypal and sheift?</h2>
+        <p class="p_left_child">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</P>
+ </div>
+
+ <div class="right">
+    <h2 class="right_child_h2"> WHERE ARE YOU FROM?</h2>
+    <P class="p_right_child">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Aliquam Assumenda Eum Blanditiis Perferendis.
+    </P>
+
+    <h2 class="right_child_h2"> WHAT IS YOUR OPENING TIME?</h2>
+<P class="p_right_child">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Aliquam Assumenda Eum Blanditiis Perferendis.</P>
+<h2 class="right_child_h2"> WHAT IS YOUR OPENING TIME?</h2>
+<P class="p_right_child">Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Aliquam Assumenda Eum Blanditiis Perferendis.</P>
+
+     </div>
+</section>
+
+
+<section class="section4">
+
+  <div class="parent_img">
+  <img src="man-3037342_960_720.jpg" class="img">
+</div>
+<div class="child_section4"> <h1 class="section4_h1"> my best performance</h1>
+
+
+<P class="child_Section4_p">Lorem ipsum dolor sit amet, <br> consectetur adipisicing elit. Ducimus <br>id dignissimos nemo minus perspiciatis <br>ullam itaque voluptas iure vero, <br>nesciunt unde odit aspernatur <br>distinctio, maiores facere officiis. Cum, <br> esse, iusto? <br> <br> Minus perspiciatis ullam itaque <br>voluptas iure vero, nesciunt unde odit <br>aspernatur distinctio, maiores facere <br>aspernatur distinctio, maiores facere </P>
+<br>
+
+</div>
+
+</section>
+
+
+<section class="section4">
+
+ 
+<div class="child_section4_right"> <h1 class="section4_h1"> my best performance</h1>
+
+<br>
+<P class="child_Section4_p">Lorem ipsum dolor sit amet, <br> consectetur adipisicing elit. Ducimus <br>id dignissimos nemo minus perspiciatis <br>ullam itaque voluptas iure vero, <br>nesciunt unde odit aspernatur <br>distinctio, maiores facere officiis. Cum, <br> esse, iusto? <br> <br> Minus perspiciatis ullam itaque <br>voluptas iure vero, nesciunt unde odit <br>aspernatur distinctio, maiores facere <br>aspernatur distinctio, maiores facere </P>
+<br>
+
+</div>
+ <div class="parent_img_right">
+  <img src="man-3037342_960_720.jpg" class="img_right">
+</div>
+
+</section>
+
+<div class="con_get_in_touch">
+<span> get in touch</span>
+<h1> contact me</h1>
+
+</div>
+<div class="con_all">
+<section class="section5_contact_me">
+
+<div class="parent_row_one">
+<div  class="parent_input_1">
+<input type="text" placeholder="first name" class="input1">
+</div>
+
+<div class="parent_input_2">
+<input type="text" placeholder="last name" class="input2">
+</div>
+
+</div>
+
+<div class="parent-email" id="parent_email">
+
+<input type="text" class="email" placeholder="email address" id="email">
+
+
+
+</div>
+
+<div class="parent_textarea">
+<textarea class="textarea" placeholder=" write your message"></textarea>
+
+</div>
+
+<div class="parent_btn">
+
+<button type="button" class="btn_child"> send message</button>
+
+
+</div>
+
+</section>
+
+<div class="con_h1_section5"><h1>need to know more on <br>
+  
+  details get in touch</h1>
+
+  <p class="para_section5">
+    Lorem ipsum dolor sit amet, consectetur
+    adipisicing elit. Dolores, distinctio! Harum 
+    quibusdam nisi, illum nulla aspernatur aut
+    quidem aperiam, quae non tempora
+    recusandae voluptatibus fugit impedit.
+
+  </p>
+</div>
+</div>
+<button type="button" class="scroll_btn"><span><i class="fas fa-angle-double-up" id="arrow_up"></i> </span> </button>
+</div>
+<script>
+
+var slideIndex = 0;
+showSlides();
+var slides,dots;
+
+function showSlides() {
+    var i;
+    slides = document.getElementsByClassName("mySlides");
+    dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 5000); // Change image every 8 seconds
+}
+
+function plusSlides(position) {
+    slideIndex +=position;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    else if(slideIndex<1){slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+}
+
+function currentSlide(index) {
+    if (index> slides.length) {index = 1}
+    else if(index<1){index = slides.length}
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[index-1].style.display = "block";
+    dots[index-1].className += " active";
+}
+
+let span = document.querySelector(".scroll_btn");
+let head = document.getElementById('header');
+
+window.onscroll = function () {
+
+  if(this.scrollY>=1000){
+
+  span.classList.add("show");
+
+  }
+  else{
+    span.classList.remove("show");
+ 
+  }
+
+}
+
+
+
+span.onclick=function(){
+
+window.scrollTo({
+  top: 0,
+  behavior:"smooth",
+});
+
+};
+
+let contact= document.getElementById("contact");
+
+contact.onclick=function(){
+
+  window.scrollTo({
+top:2254,
+behavior:"smooth",
+
+
+  });
+
+};
+
+let home=document.getElementById("home");
+
+home.onclick=function(){
+
+window.scrollTo({
+
+top:0,
+behavior:"smooth",
+
+
+});
+};
+
+
+let about=document.getElementById("about");
+
+about.onclick=function(){
+
+window.scrollTo({
+
+top:904,
+behavior:"smooth",
+
+
+});
+};
+
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+
+  function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("c_page").style.display = "block";
+}
+
+}
+
+
+
+</script>
+   
+</body>
+</html>
